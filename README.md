@@ -27,7 +27,7 @@ PROJECT_DETECT_OBJECT — Real-time Object Recognition System (YOLOv11 + SAM2.1 
     - File cấu hình: configs/sam2.1/sam2.1_hiera_b+.yaml
 4️⃣ Custom Classifier (ResNet18 Fine-tuned)
     - Model ResNet18 được huấn luyện riêng trên dataset 102 lớp.
-    - Checkpoint: /media/voanhnhat/SDD_OUTSIDE1/PROJECT_DETECT_OBJECT/data/final_pth_to_webcam/sam2_inference_weights_latest.pth
+    - Checkpoint: /media/SDD_OUTSIDE1/PROJECT_DETECT_OBJECT/data/final_pth_to_webcam/sam2_inference_weights_latest.pth
     - Khi phát hiện vật thể, phần ảnh được crop theo mask → phân loại qua classifier.
 
 5️⃣ Image Searcher (Backup Matching)
