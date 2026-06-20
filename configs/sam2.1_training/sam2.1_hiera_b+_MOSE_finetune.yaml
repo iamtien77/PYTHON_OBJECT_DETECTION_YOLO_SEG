@@ -1,7 +1,7 @@
 launcher:
   num_nodes: 1
   gpus_per_node: 8
-  experiment_log_dir: /media/voanhnhat/SDD_OUTSIDE1/PROJECT_DETECT_OBJECT/output/experiments
+  experiment_log_dir: /media/SDD_OUTSIDE1/PROJECT_DETECT_OBJECT/output/experiments
 
 scratch:
   resolution: 1024
@@ -17,9 +17,9 @@ scratch:
 
 dataset:
   # PATHS to Dataset
-  img_folder: /media/voanhnhat/SDD_OUTSIDE1/PROJECT_DETECT_OBJECT/data/processed                                       # PATH to MOSE JPEGImages folder
-  gt_folder: /media/voanhnhat/SDD_OUTSIDE1/PROJECT_DETECT_OBJECT/data/test                                        # PATH to MOSE Annotations folder
-  file_list_txt: /media/voanhnhat/SDD_OUTSIDE1/PROJECT_DETECT_OBJECT/data/coco_dataset_fixed_stream/coco_dataset.json # Optional PATH to filelist containing a subset of videos to be used for training
+  img_folder: /media/SDD_OUTSIDE1/PROJECT_DETECT_OBJECT/data/processed                                       # PATH to MOSE JPEGImages folder
+  gt_folder: /media/SDD_OUTSIDE1/PROJECT_DETECT_OBJECT/data/test                                        # PATH to MOSE Annotations folder
+  file_list_txt: /media/SDD_OUTSIDE1/PROJECT_DETECT_OBJECT/data/coco_dataset_fixed_stream/coco_dataset.json # Optional PATH to filelist containing a subset of videos to be used for training
   multiplier: 2
 
 # Video transform
@@ -305,16 +305,16 @@ trainer:
   logging:
     tensorboard_writer:
       _target_: sam2.training.utils.logger.make_tensorboard_logger
-      log_dir:  /media/voanhnhat/SDD_OUTSIDE1/PROJECT_DETECT_OBJECT/output/experiments/tensorboard
+      log_dir:  /media/SDD_OUTSIDE1/PROJECT_DETECT_OBJECT/output/experiments/tensorboard
       flush_secs: 120
       should_log: True
-    log_dir: /media/voanhnhat/SDD_OUTSIDE1/PROJECT_DETECT_OBJECT/output/experiments/logs
+    log_dir: /media/SDD_OUTSIDE1/PROJECT_DETECT_OBJECT/output/experiments/logs
     log_freq: 10
 
 
   # initialize from a SAM 2 checkpoint
   checkpoint:
-    save_dir: /media/voanhnhat/SDD_OUTSIDE1/PROJECT_DETECT_OBJECT/output/experiments/checkpoints
+    save_dir: /media/SDD_OUTSIDE1/PROJECT_DETECT_OBJECT/output/experiments/checkpoints
     save_freq: 0 # 0 only last checkpoint is saved.
     model_weight_initializer:
       _partial_: True
@@ -325,7 +325,7 @@ trainer:
 
       state_dict:
         _target_: sam2.training.utils.checkpoint_utils.load_checkpoint_and_apply_kernels
-        checkpoint_path: /media/voanhnhat/SDD_OUTSIDE1/PROJECT_DETECT_OBJECT/checkpoints/sam2.1_hiera_base_plus.pt # PATH to SAM 2.1 checkpoint
+        checkpoint_path: /media/SDD_OUTSIDE1/PROJECT_DETECT_OBJECT/checkpoints/sam2.1_hiera_base_plus.pt # PATH to SAM 2.1 checkpoint
         ckpt_state_dict_keys: ['model']
 
 
