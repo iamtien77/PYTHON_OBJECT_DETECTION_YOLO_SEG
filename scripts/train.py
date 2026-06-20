@@ -381,7 +381,7 @@ class OptimizedTrainer:
             
             self.device = torch.device(trainer_cfg.accelerator)
             
-            SAM2_ARCH_CONFIG_PATH = "/media/voanhnhat/SDD_OUTSIDE1/PROJECT_DETECT_OBJECT/configs/sam2.1/sam2.1_hiera_b+.yaml"
+            SAM2_ARCH_CONFIG_PATH = "/media/SDD_OUTSIDE1/PROJECT_DETECT_OBJECT/configs/sam2.1/sam2.1_hiera_b+.yaml"
             
             model_path = None
             
@@ -469,10 +469,10 @@ class DummyDataset:
         return self.loader
 # ====================== MAIN ======================
 if __name__ == "__main__":
-    img_dir = "/media/voanhnhat/SDD_OUTSIDE1/PROJECT_DETECT_OBJECT/data/hybrid_data"
+    img_dir = "/media/SDD_OUTSIDE1/PROJECT_DETECT_OBJECT/data/hybrid_data"
     ann_dir = img_dir
-    output_path = "/media/voanhnhat/SDD_OUTSIDE1/PROJECT_DETECT_OBJECT/output"
-    config_path = "/media/voanhnhat/SDD_OUTSIDE1/PROJECT_DETECT_OBJECT/configs/yolo/yolo_learning_tools.yaml"
+    output_path = "/media/SDD_OUTSIDE1/PROJECT_DETECT_OBJECT/output"
+    config_path = "/media/SDD_OUTSIDE1/PROJECT_DETECT_OBJECT/configs/yolo/yolo_learning_tools.yaml"
 
     print("[WARN] If the dataset is very large, make sure the hybrid_coco.json file is split or reduce augmentations to avoid OOM.")
 
