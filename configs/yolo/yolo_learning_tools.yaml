@@ -1,4 +1,4 @@
-path: /media/voanhnhat/SDD_OUTSIDE1/PROJECT_DETECT_OBJECT/data
+path: /media/SDD_OUTSIDE1/PROJECT_DETECT_OBJECT/data
 train: data/hybrid_data
 val: data/hybrid_data
 test: data/hybrid_data
@@ -37,13 +37,13 @@ augment: True
 
 trainer:
   logging:
-    log_dir: /media/voanhnhat/SDD_OUTSIDE1/PROJECT_DETECT_OBJECT/output/experiments/logs 
+    log_dir: /media/SDD_OUTSIDE1/PROJECT_DETECT_OBJECT/output/experiments/logs 
     log_freq: 100 
     tensorboard_writer: 
       should_log: True
 
   checkpoint:
-    save_dir: /media/voanhnhat/SDD_OUTSIDE1/PROJECT_DETECT_OBJECT/output/experiments/checkpoints
+    save_dir: /media/SDD_OUTSIDE1/PROJECT_DETECT_OBJECT/output/experiments/checkpoints
     save_freq: 1
 
   model:
@@ -57,9 +57,9 @@ trainer:
 
   data:
     train:
-      path: /media/voanhnhat/SDD_OUTSIDE1/PROJECT_DETECT_OBJECT/data/hybrid_data/hybrid_coco.json
+      path: /media/SDD_OUTSIDE1/PROJECT_DETECT_OBJECT/data/hybrid_data/hybrid_coco.json
     val:
-      path: /media/voanhnhat/SDD_OUTSIDE1/PROJECT_DETECT_OBJECT/data/hybrid_data/hybrid_coco.json
+      path: /media/SDD_OUTSIDE1/PROJECT_DETECT_OBJECT/data/hybrid_data/hybrid_coco.json
 
   optim:
     optimizer:
